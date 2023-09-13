@@ -7,16 +7,13 @@ class MealWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(
-        children: [
-          Image.network(mealModel.imageUrl ?? ''),
-          Text(mealModel.name ?? ''),
-          Text(mealModel.price ?? ''),
-          ...mealModel.contents?.map((e) => Text(e.name ?? '')).toList() ?? []
-        ],
-      ),
+    return Column(
+      children: [
+        Image.network(mealModel.imageUrl ?? ''),
+        Text(mealModel.name ?? ''),
+        Text(mealModel.price ?? ''),
+        ...mealModel.contents?.map((e) => Text(e.name ?? '')).toList() ?? []
+      ],
     );
   }
 }
