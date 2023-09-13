@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/rendering/box.dart';
 
 class Screen extends StatelessWidget {
   @override
