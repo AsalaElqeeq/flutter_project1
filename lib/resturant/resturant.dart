@@ -18,14 +18,13 @@ class Resturant extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Resturant app'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: mealwidgetConverter(),
+        appBar: AppBar(
+          title: Text('Resturant app'),
         ),
-      ),
-    );
+        body: ListView.builder(
+            itemCount: mealsData.length,
+            itemBuilder: (BuildContext context, int index) {
+              return mealwidgetConverter()[index];
+            }));
   }
 }
