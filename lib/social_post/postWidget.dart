@@ -148,6 +148,7 @@ class PostWidgetState extends State<PostWidget> {
                             widget.postmodel.comment
                                 .add(textEditingController.text);
                             textEditingController.clear();
+
                             setState(() {});
                           },
                         ),
